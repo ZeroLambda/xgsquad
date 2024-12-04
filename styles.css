@@ -337,9 +337,8 @@ header {
 }
 
 /* Offset for Sticky Header */
-#features,
-#contact {
-    scroll-margin-top: 130px; /* Adjust to match the header height */
+#features {
+    scroll-margin-top: 120px; /* Adjust to match the header height */
 }
 
 /* Contact Section */
@@ -391,7 +390,7 @@ header {
 }
 
 .submit-btn {
-    width: 103%; /* Adjusted the button size - Hack */
+    width: 100%;
     background: #ffca28;
     color: #333;
     border: none;
@@ -456,7 +455,7 @@ header {
     color: #fff;
     text-align: center;
     padding: 2rem;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -478,6 +477,121 @@ header {
     margin: 0 auto;
     line-height: 1.5;
     color: #f0f0f0;
+}
+
+/* Memories Section */
+.parallax-section {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Rotating Quotes */
+/* .rotating-quotes {
+    text-align: center;
+    background: url('images/rotating-2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    padding: 5rem 1rem;
+    position: relative;
+} */
+
+.rotating-quotes {
+    text-align: center;
+    background: linear-gradient(-45deg, #1e90ff, #ff6347, #87cefa, #ff69b4);
+    background-size: 400% 400%;
+    color: #fff;
+    padding: 5rem 1rem;
+    position: relative;
+    animation: gradientShift 10s ease infinite;
+}
+
+.rotating-quotes h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.rotating-quotes .quote {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Timeline Section */
+.memories-timeline {
+    padding: 3rem 1rem;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.memory-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.memory-icon img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.memory-content h3 {
+    font-size: 1.5rem;
+}
+
+.memory-content p {
+    color: #555;
+}
+
+/* Photo Gallery */
+.memories-gallery {
+    padding: 4rem 2rem;
+    text-align: center;
+    /* background: url('images/gallery-bg-3.jpg') no-repeat center center fixed; */
+    /* background: linear-gradient(to bottom, #2c2c2c, #000000); */
+    /* background: linear-gradient(to bottom, #e7f3f9, #ffffff); */
+    /* background: linear-gradient(to bottom, #ffe5d4, #f9f3ef); */
+    background-color: #dfe7db;
+    /* background-color: #e8e0d9; */
+    /* background-color: #c7d9e2; */
+    background-size: cover;
+    color: #fff;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {

@@ -8,13 +8,14 @@
     <title>Memories - XGSquad</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
             <a href="index.html" class="home-link">
-                <img src="images/logo-4.png" alt="XG Squad Logo" class="logo-img">
+                <img src="images/logo-2.jpg" loading="lazy" alt="XG Squad Logo" class="logo-img">
             </a>    
             <a href="index.html" class="home-link">
                 <h1 class="logo">XG<span>Squad</span></h1>
@@ -34,11 +35,66 @@
     </header>
 
     <!-- Coming Soon Section -->
-    <section class="coming-soon">
+    <!-- <section class="coming-soon">
         <h1>Memories Page</h1>
         <p class="subtext">Coming Soon</p>
         <p>We're crafting something special to capture all our cherished moments.</p>
+    </section> -->
+
+    <!-- Rotating Quotes Section -->
+    <section class="rotating-quotes" data-aos="zoom-in">
+        <h2>Our Cherished Memories</h2>
+        <p class="quote">"The best thing about memories is making them together – XG Squad."</p>
     </section>
+
+    <!-- Parallax Effects 
+    <section class="parallax-section" data-parallax="scroll" data-image-src="path-to-image.jpg">
+        <h2>Memories in Motion</h2>
+    </section> -->
+
+    <!-- Dynamic Timeline Section -->
+    <section class="memories-timeline">
+        <div class="memory-item" data-aos="fade-right">
+            <div class="memory-icon">
+                <img src="images/vacation-las-vegas-1.jpg" loading="lazy" alt="Family Vacation">
+            </div>
+            <div class="memory-content">
+                <h3>Family Vacation 2022</h3>
+                <p>Our unforgettable trip to the Grand Canyon.</p>
+            </div>
+        </div>
+        <div class="memory-item" data-aos="flip-up">
+            <div class="memory-icon">
+                <img src="images/graduation-1.jpg" loading="lazy" alt="Graduation Day">
+            </div>
+            <div class="memory-content">
+                <h3>Graduation Day</h3>
+                <p>Celebrating Mahima's big achievement!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="memories-gallery">
+        <h2 data-aos="fade-down">Photo Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="images/jasper-1.jpg" loading="lazy" alt="Memory 1">
+            </div>
+            <div class="gallery-item" data-aos="zoom-out" data-aos-delay="200">
+                <img src="images/canyon-1.jpg" loading="lazy" alt="Memory 2">
+            </div>
+            <div class="gallery-item" data-aos="flip-left" data-aos-delay="300">
+                <img src="images/watkins-1.jpg" loading="lazy" alt="Memory 3">
+            </div>
+            <div class="gallery-item" data-aos="zoom-out" data-aos-delay="200">
+                <img src="images/madras-1.jpg" loading="lazy" alt="Memory 4">
+            </div>
+            <div class="gallery-item" data-aos="flip-left" data-aos-delay="100">
+                <img src="images/niagara-1.jpg" loading="lazy" alt="Memory 5">
+            </div>
+        </div>
+    </section>    
 
     <!-- Footer -->
     <footer class="footer-bg">
@@ -54,6 +110,14 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/parallax-js@1.5.0/dist/parallax.min.js"></script>
     <script src="scripts/menu.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Animate only once
+        });
+    </script>
 </body>
 </html>
