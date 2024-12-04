@@ -406,6 +406,16 @@ header {
     box-shadow: 0 6px 15px rgba(255, 202, 40, 0.5);
 }
 
+/* Footer Content */
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center;
+    gap: 1rem;
+}
+
 /* Footer */
 .footer-bg {
     background: linear-gradient(to top, #1e1e1e, #333);
@@ -423,9 +433,14 @@ header {
 .footer-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Wrap links to a new row if needed */
     justify-content: center;
     gap: 1.5rem;
     margin: 1rem 0;
+}
+
+.footer-links li {
+    margin: 0;
 }
 
 .footer-links a {
@@ -441,6 +456,17 @@ header {
 .footer-note {
     font-size: 0.9rem;
     margin-top: 1rem;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+    .footer-links {
+        gap: 0.5rem; /* Reduce spacing between links */
+    }
+
+    .footer-links a {
+        font-size: 0.85rem; /* Adjust font size */
+    }
 }
 
 /* Coming Soon Section */
@@ -535,31 +561,62 @@ header {
 
 /* Timeline Section */
 .memories-timeline {
-    padding: 3rem 1rem;
-    background: #f9f9f9;
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     gap: 2rem;
+    padding: 3rem 1rem;
+    background: #f9f9f9;
 }
 
 .memory-item {
     display: flex;
     align-items: center;
     gap: 2rem;
+    width: 100%;
+    max-width: 800px;
 }
 
 .memory-icon img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    object-fit: cover; /* Ensure images maintain their aspect ratio */
+}
+
+.memory-content {
+    flex: 1;
 }
 
 .memory-content h3 {
     font-size: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .memory-content p {
     color: #555;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .memory-item {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align text to the left */
+    }
+
+    .memory-icon img {
+        width: 80px; /* Adjust image size for smaller screens */
+        height: 80px;
+        margin-bottom: 1rem; /* Add space below the image */
+    }
+
+    .memory-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .memory-content p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Photo Gallery */
