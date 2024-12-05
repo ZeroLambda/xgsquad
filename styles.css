@@ -406,6 +406,15 @@ header {
     box-shadow: 0 6px 15px rgba(255, 202, 40, 0.5);
 }
 
+/* Footer */
+.footer-bg {
+    height: 50vh;
+    background: linear-gradient(to top, #1e1e1e, #333);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
 /* Footer Content */
 .footer-content {
     max-width: 1200px;
@@ -414,14 +423,6 @@ header {
     flex-direction: column; /* Stack items vertically by default */
     align-items: center;
     gap: 1rem;
-}
-
-/* Footer */
-.footer-bg {
-    background: linear-gradient(to top, #1e1e1e, #333);
-    padding: 2rem;
-    text-align: center;
-    color: #fff;
 }
 
 .footer-content h3 {
@@ -546,19 +547,6 @@ header {
     font-style: italic;
 }
 
-/* Gradient Animation */
-@keyframes gradientShift {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 /* Timeline Section */
 .memories-timeline {
     display: flex;
@@ -626,12 +614,16 @@ header {
     /* background: url('images/gallery-bg-3.jpg') no-repeat center center fixed; */
     /* background: linear-gradient(to bottom, #2c2c2c, #000000); */
     /* background: linear-gradient(to bottom, #e7f3f9, #ffffff); */
-    /* background: linear-gradient(to bottom, #ffe5d4, #f9f3ef); */
-    background-color: #dfe7db;
+    background: linear-gradient(to bottom, #ffe5d4, #f9f3ef);
+    /* background-color: #dfe7db; */
     /* background-color: #e8e0d9; */
     /* background-color: #c7d9e2; */
     background-size: cover;
     color: #fff;
+}
+
+.memories-gallery h2 {
+    color: #333;
 }
 
 .gallery-grid {
@@ -649,6 +641,156 @@ header {
 .gallery-item img:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog Hero Section */
+.blog-hero {
+    text-align: center;
+    /* background: url('path-to-hero-background.jpg') no-repeat center center fixed; */
+    /* background: linear-gradient(to bottom, #ffe5d4, #f9f3ef); */
+    background: linear-gradient(-45deg, #1e90ff, #ff6347, #87cefa, #ff69b4);
+    background-size: cover;
+    padding: 5rem 1rem;
+    animation: gradientShift 10s ease infinite;
+    color: #fff;
+}
+
+.blog-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-hero p {
+    font-size: 1.2rem;
+}
+
+/* Featured Blogs Section */
+.featured-blogs {
+    background: #f9f9f9;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.featured-blogs h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.featured-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Grid Section */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    background: #f9f9f9;
+}
+
+.blog-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.read-more {
+    background: #ffca28;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.close-modal {
+    background: #ffca28;
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+}
+
+.close-modal:hover {
+    background: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-hero h1 {
+        font-size: 2rem;
+    }
+
+    .blog-hero p {
+        font-size: 1rem;
+    }
+
+    .featured-card {
+        padding: 1.5rem;
+    }
+
+    .blog-card {
+        padding: 1rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1.5rem;
+    }
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 @media (max-width: 768px) {

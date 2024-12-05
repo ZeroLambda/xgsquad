@@ -8,13 +8,14 @@
     <title>Blogs - XGSquad</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="header-container">
             <a href="index.html" class="home-link">
-                <img src="images/logo-4.png" alt="XG Squad Logo" class="logo-img">
+                <img src="images/logo-2.jpg" alt="XG Squad Logo" class="logo-img">
             </a>    
             <a href="index.html" class="home-link">
                 <h1 class="logo">XG<span>Squad</span></h1>
@@ -33,27 +34,143 @@
         </div>
     </header>
 
-    <!-- Coming Soon Section -->
+    <!-- Coming Soon Section
     <section class="coming-soon">
         <h1>Blogs Page</h1>
         <p class="subtext">Coming Soon</p>
         <p>Stay tuned for stories, insights, and exciting updates from the XG Squad.</p>
     </section>
+    -->
+
+    <!-- Hero Section with Parallax Effect -->
+    <section class="blog-hero">
+        <h1>XG Squad Stories</h1>
+        <p>Sharing our family moments, milestones, and lessons learned along the way.</p>
+    </section>
+
+    <!-- Featured Blogs Section -->
+    <section class="featured-blogs" data-aos="fade-up">
+        <h2>Featured Stories</h2>
+        <div class="featured-card">
+            <h3>Our Grand Canyon Trip</h3>
+            <p>An unforgettable adventure exploring the wonders of the canyon...</p>
+            <button class="read-more" onclick="openModal('blog1')">Read More</button>
+        </div>
+    </section>
+
+    <!-- Blog Grid Section -->
+    <section class="blog-grid">
+        <div class="blog-card" data-aos="fade-right">
+            <h3>Celebrating Togetherness</h3>
+            <p class="author">By Mahima</p>
+            <p class="preview">A beautiful family dinner filled with love, laughter, and memories...</p>
+            <button class="read-more" onclick="openModal('blog2')">Read More</button>
+        </div>
+        <div class="blog-card" data-aos="fade-left">
+            <h3>Anto-O-Rio's First Film</h3>
+            <p class="author">By Javier</p>
+            <p class="preview">Supporting Rio's dream of becoming a filmmaker...</p>
+            <button class="read-more" onclick="openModal('blog3')">Read More</button>
+        </div>
+        <div class="blog-card" data-aos="fade-up">
+            <h3>Trip to VGP MGM Resort</h3>
+            <p class="author">By Mahima</p>
+            <p class="preview">Wonderful kids outing filled with love, laughter, and memories...</p>
+            <button class="read-more" onclick="openModal('blog4')">Read More</button>
+        </div>        
+    </section>
+
+    <!-- Modals -->
+    <!-- Modal 1 -->
+    <div id="blog1" class="modal hidden">
+        <div class="modal-content">
+            <h3>Our Grand Canyon Trip</h3>
+            <p>From breathtaking views to challenging hikes, this trip brought our family closer together. 
+                Each moment was a mix of awe and laughter, making it a memory we’ll cherish forever.</p>
+            <button class="close-modal" onclick="closeModal('blog1')">Close</button>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div id="blog2" class="modal hidden">
+        <div class="modal-content">
+            <h3>Celebrating Togetherness</h3>
+            <p>A beautiful family dinner filled with love, laughter, and memories. It was a reminder of 
+                how special it is to come together, share stories, and celebrate life's moments.</p>
+            <button class="close-modal" onclick="closeModal('blog2')">Close</button>
+        </div>
+    </div>
+    <!-- Modal 3 -->
+    <div id="blog3" class="modal hidden">
+        <div class="modal-content">
+            <h3>Anto-O-Rio's First Film</h3>
+            <p>Supporting Anto-O-Rio's dream of becoming a filmmaker was a proud moment for our family.
+                 From brainstorming ideas to seeing his vision come to life, this journey showed us 
+                 the power of perseverance and creativity.</p>
+            <button class="close-modal" onclick="closeModal('blog3')">Close</button>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div id="blog4" class="modal hidden">
+        <div class="modal-content">
+            <h3>Trip to VGP MGM Resort</h3>
+            <p>Wonderful kids outing with love, laughter, and memories. It was a reminder of 
+                how special it is to come together, share stories, and celebrate life's moments.
+                Kids are special and they made it really awesome.
+            </p>
+            <button class="close-modal" onclick="closeModal('blog4')">Close</button>
+        </div>
+    </div>        
 
     <!-- Footer -->
     <footer class="footer-bg">
         <div class="footer-content">
-            <h3>XG Squad</h3>
+            <h1 class="logo">XG<span>Squad</span></h1>
             <p>Celebrating love, laughter, and memories that bind us together.</p>
             <ul class="footer-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="memories.html">Memories</a></li>
                 <li><a href="index.html#contact">Contact Us</a></li>
             </ul>
-            <p class="footer-note">© 2024 XG Squad. All rights reserved.</p>
+            <p class="footer-note">© 2024 XGSquad. All rights reserved.</p>
         </div>
     </footer>
     
+    <script src="https://cdn.jsdelivr.net/npm/parallax-js@1.5.0/dist/parallax.min.js"></script>
     <script src="scripts/menu.js" defer></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Animate only once
+        });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Modal Handling
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('hidden');
+        }
+
+        // Close modal on Escape key or clicking outside
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => modal.classList.add('hidden'));
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.classList.add('hidden');
+            }
+        });
+    </script>    
 </body>
 </html>
