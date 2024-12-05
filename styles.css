@@ -210,7 +210,8 @@ header {
     padding: 0.8rem 2rem;
     font-size: 1.2rem;
     background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    /* color: #fff; */
+    color: #ffca28;
     border: 1px solid #fff;
     cursor: pointer;
     margin-top: 1rem;
@@ -356,16 +357,19 @@ header {
     color: #fff;
 }
 
-.footer-content h1 {
+.footer-note {
+    white-space: nowrap; /* Prevents any break or extra space */
+}
+
+.footer-note h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: #fff;
     
 }
 
-.footer-content span {
-    color: #ffca28;
-    margin-left: 5px;
+.footer-note span {
+    display: inline;
 }
 
 .footer-links {
