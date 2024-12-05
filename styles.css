@@ -470,21 +470,20 @@ header {
     }
 }
 
-/* Coming Soon Section */
+/* Coming Soon Section 
 .coming-soon {
     height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background: linear-gradient(135deg, #1e90ff, #87cefa); */
     background: linear-gradient(-45deg, #1e90ff, #ff6347, #87cefa, #ff69b4);
     color: #fff;
     text-align: center;
     padding: 2rem;
-    /* border-radius: 10px; */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+*/
 
 .coming-soon h1 {
     font-size: 3rem;
@@ -518,18 +517,10 @@ header {
 }
 
 /* Rotating Quotes */
-/* .rotating-quotes {
-    text-align: center;
-    background: url('images/rotating-2.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
-    padding: 5rem 1rem;
-    position: relative;
-} */
-
 .rotating-quotes {
     text-align: center;
     background: linear-gradient(-45deg, #1e90ff, #ff6347, #87cefa, #ff69b4);
+    background-size: cover;
     background-size: 400% 400%;
     color: #fff;
     padding: 5rem 1rem;
@@ -646,8 +637,6 @@ header {
 /* Blog Hero Section */
 .blog-hero {
     text-align: center;
-    /* background: url('path-to-hero-background.jpg') no-repeat center center fixed; */
-    /* background: linear-gradient(to bottom, #ffe5d4, #f9f3ef); */
     background: linear-gradient(-45deg, #1e90ff, #ff6347, #87cefa, #ff69b4);
     background-size: cover;
     padding: 5rem 1rem;
