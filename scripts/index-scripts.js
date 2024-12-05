@@ -1,8 +1,8 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // Typed Text Animation for Hero Section
-const familyNames = ["Xavier - The Rock",
-                    "Gracy - The Heart",
+const familyNames = ["Xavier(Dad) - The Rock",
+                    "Gracy(Mom) - The Heart",
                     "Deepa G. - The Guiding Light",
                     "Anto-O-Rio - The Visionary",
                     "Javier - The Wanderer",

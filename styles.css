@@ -353,12 +353,19 @@ header {
     flex-direction: column; /* Stack items vertically by default */
     align-items: center;
     gap: 1rem;
+    color: #fff;
 }
 
 .footer-content h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
+    color: #fff;
+    
+}
+
+.footer-content span {
     color: #ffca28;
+    margin-left: 5px;
 }
 
 .footer-links {
@@ -382,6 +389,11 @@ header {
 
 .footer-links a:hover {
     color: #fff;
+}
+
+.footer-content p span {
+    color: #ffca28;
+    margin-left: 5px;
 }
 
 .footer-note {
